@@ -17,3 +17,13 @@ def calculate():
         "status": "success",
         "result": result.x
     }
+
+@app.get("/results")
+def get_results():
+    return {
+        "data": [
+            {"Bus": 1001, "Voltage": 1.02, "Angle": 10.5},
+            {"Bus": 1002, "Voltage": 0.98, "Angle": 8.2},
+            {"Bus": 1003, "Voltage": 1.01, "Angle": 9.1}
+        ]
+    }
